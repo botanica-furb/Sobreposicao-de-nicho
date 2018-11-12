@@ -1,5 +1,6 @@
+install.packages("ecospat")
 library(ecospat)
-# Importe os valores ambientais de cada espÈcie/populaÁ„o
+# Importe os valores ambientais de cada esp√©cie/popula√ß√£o
 sp <- exemplo.sobreposicao
 
 pca.env <- dudi.pca(rbind(sp)[,4:10],scannf=F,nf=2)
@@ -35,13 +36,13 @@ D.overlap
 eq.test <- ecospat.niche.equivalency.test(grid.clim.sp, grid.clim.sp2,
                                           rep=500, alternative = "greater")
 
-eq.test$p.D        # p.D < 0.05 = EquivalÍncia, p.D > 0.05 = N„o equivalente
+eq.test$p.D        # p.D < 0.05 = Equival√™ncia, p.D > 0.05 = N√£o equivalente
 
 sim.test <- ecospat.niche.similarity.test(grid.clim.sp, grid.clim.sp2,
                                                   rep=500, alternative = "greater",
                                                   rand.type=1)
 
-sim.test$p.D       #p.D < 0.05 = Similaridade, p.D > 0.05 n„o similar
+sim.test$p.D       #p.D < 0.05 = Similaridade, p.D > 0.05 n√£o similar
 
 
 ecospat.plot.overlap.test(eq.test, "D", "Equivalency")
