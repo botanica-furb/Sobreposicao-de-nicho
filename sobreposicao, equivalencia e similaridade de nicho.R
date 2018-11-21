@@ -1,6 +1,8 @@
+# Script derivado do pacote Ecospat, por Carlos H. Russi.
+
 install.packages("ecospat")
 library(ecospat)
-# Importe os valores ambientais de cada espécie/população
+# Importe os valores ambientais dos registros de ocorrência de cada espécie/população
 sp <- exemplo.sobreposicao
 
 pca.env <- dudi.pca(rbind(sp)[,4:10],scannf=F,nf=2)
